@@ -1,0 +1,174 @@
+:root {
+  --cn-primary: #154212;
+  --cn-primary-container: #2d5a27;
+  --cn-secondary: #944a00;
+  --cn-secondary-container: #fc8f34;
+  --cn-tertiary: #533200;
+
+  --cn-bg: #f8f9fa;
+  --cn-surface: #f8f9fa;
+  --cn-surface-container-low: #f3f4f5;
+  --cn-surface-container-lowest: #ffffff;
+  --cn-surface-container-high: #e7e8e9;
+  --cn-surface-container-highest: #e1e3e4;
+
+  --cn-on-surface: #191c1d;
+  --cn-on-surface-variant: #42493e;
+  --cn-outline: #72796e;
+  --cn-outline-variant: #c2c9bb;
+
+  --cn-radius-xl: 1.25rem;
+  --cn-radius-2xl: 2rem;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  font-family: "Inter", system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+  background: var(--cn-bg);
+  color: var(--cn-on-surface);
+  overflow-x: hidden;
+}
+
+h1,
+h2,
+h3,
+h4,
+.cn-headline {
+  font-family: "Plus Jakarta Sans", system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+}
+
+/* “No-line rule”: remove borders for sectioning */
+.cn-no-border {
+  border: 0 !important;
+}
+
+/* Layout helpers */
+.cn-topnav {
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  background: rgba(255, 255, 255, 0.82);
+}
+
+.cn-sidebar {
+  background: #f9fafb;
+  border-right: 0;
+  border-radius: var(--cn-radius-xl);
+}
+
+.cn-card {
+  background: var(--cn-surface-container-low);
+  border: 0;
+  border-radius: var(--cn-radius-xl);
+}
+
+.cn-card--lowest {
+  background: var(--cn-surface-container-lowest);
+}
+
+.cn-editorial-shadow {
+  box-shadow: 0 24px 40px -12px rgba(21, 66, 18, 0.08);
+}
+
+.cn-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.375rem;
+  padding: 0.35rem 0.75rem;
+  border-radius: 999px;
+  font-size: 0.7rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  border: 0;
+  white-space: nowrap;
+}
+
+.cn-chip--secondary {
+  background: rgba(252, 143, 52, 0.18);
+  color: var(--cn-secondary);
+}
+
+.cn-chip--primary {
+  background: rgba(21, 66, 18, 0.12);
+  color: var(--cn-primary);
+}
+
+.cn-chip--tertiary {
+  background: rgba(83, 50, 0, 0.14);
+  color: var(--cn-tertiary);
+}
+
+.cn-btn-primary {
+  border: 0;
+  border-radius: 1rem;
+  font-weight: 800;
+  background: linear-gradient(135deg, var(--cn-primary), var(--cn-primary-container));
+  color: #fff;
+}
+
+.cn-btn-secondary {
+  border: 0;
+  border-radius: 1rem;
+  font-weight: 800;
+  background: var(--cn-surface-container-highest);
+  color: var(--cn-on-surface);
+}
+
+.cn-btn-pill {
+  border-radius: 999px;
+  font-weight: 800;
+}
+
+.cn-input {
+  background: var(--cn-surface-container-lowest);
+  border: 0;
+  border-radius: 1rem;
+  padding: 0.9rem 1rem;
+}
+
+.cn-input:focus {
+  outline: none;
+  box-shadow: 0 0 0 0.25rem rgba(21, 66, 18, 0.18);
+}
+
+.material-symbols-outlined {
+  font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 24;
+}
+
+.material-symbols-outlined.cn-fill {
+  font-variation-settings: "FILL" 1, "wght" 500, "GRAD" 0, "opsz" 24;
+}
+
+/* Mobile bottom nav spacing */
+.cn-mobile-nav-spacer {
+  height: 72px;
+}
+
+/* Recipe hero */
+.cn-hero {
+  border-radius: var(--cn-radius-2xl);
+  overflow: hidden;
+  min-height: 420px;
+}
+
+.cn-hero-overlay {
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.05) 0%, rgba(0, 0, 0, 0.78) 100%);
+}
+
+/* Small utility */
+.cn-text-muted {
+  color: var(--cn-on-surface-variant) !important;
+}
+
+/* Mobile nav: categories block inside Bootstrap collapse */
+@media (max-width: 991.98px) {
+  #topnav.collapse.show {
+    max-height: calc(100vh - 72px);
+    overflow-y: auto;
+  }
+}
+
