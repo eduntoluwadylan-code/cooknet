@@ -11,7 +11,7 @@ $pdo = cn_pdo();
 $cn_recipe_id_get = isset($_GET['id']) ? (int) $_GET['id'] : 0;
 $cn_recipe_slug_get = isset($_GET['slug']) ? trim((string) $_GET['slug']) : '';
 if ($cn_recipe_id_get < 1) {
-    $cn_recipe_id_get = 0;
+    $cn_recipe_id_get = 0; 
 }
 if ($cn_recipe_slug_get === '') {
     $cn_recipe_slug_get = null;
