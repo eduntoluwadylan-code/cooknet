@@ -9,7 +9,7 @@ require_once __DIR__ . '/includes/category_recipes_query.php';
 
 $pdo = cn_pdo();
 $cn_cat_id = isset($_GET['id']) ? (int) $_GET['id'] : 0;
-if ($cn_cat_id < 1) {
+if ($cn_cat_id < 1) { 
     $cn_category = null;
     $cn_recipes = [];
     $cn_category_missing = true;
