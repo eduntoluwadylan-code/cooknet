@@ -9,7 +9,7 @@ require __DIR__ . '/includes/auth.php';
 
 cn_require_login('index.php?login=1');
 
-$pdo = cn_pdo();
+$pdo = cn_pdo(); 
 $cn_dashboard_user = cn_current_user($pdo);
 if ($cn_dashboard_user === null) {
     cn_logout_user();
