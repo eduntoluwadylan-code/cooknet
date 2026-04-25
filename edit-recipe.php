@@ -11,7 +11,7 @@ $cn_sidebar_sticky_top = '104px';
 require __DIR__ . '/includes/config.php';
 require_once __DIR__ . '/includes/auth.php';
 require_once __DIR__ . '/includes/categories_helper.php';
-require_once __DIR__ . '/includes/category_recipes_query.php';
+require_once __DIR__ . '/includes/category_recipes_query.php'; 
 
 /**
  * @return list<array{qty: string, name: string}>
