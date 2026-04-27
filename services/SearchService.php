@@ -3,7 +3,7 @@
 declare(strict_types=1);
 
 /** Published recipe title/description search for navbar suggest. */
-final class SearchService
+final class SearchService 
 {
     /**
      * @return list<array{slug: string, title: string, category_label: string}>
