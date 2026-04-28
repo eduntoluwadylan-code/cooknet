@@ -8,6 +8,7 @@ if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
     cn_redirect('../index.php');
 }
 
+
 $token = $_POST['csrf_token'] ?? null;
 if (!cn_csrf_verify(is_string($token) ? $token : null)) {
     cn_flash_set('auth_error', 'Invalid session. Please try again.');
