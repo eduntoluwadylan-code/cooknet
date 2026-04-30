@@ -12,7 +12,7 @@ if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
 $token = $_POST['csrf_token'] ?? null;
 if (!cn_csrf_verify(is_string($token) ? $token : null)) {
     cn_flash_set('auth_error', 'Invalid session. Please try again.');
-    cn_redirect('../index.php?login=1');
+    cn_redirect('../index.php?login=1'); 
 }
 
 $email = trim((string) ($_POST['email'] ?? ''));
